@@ -1,16 +1,18 @@
 
-import './App.css'
+// import './App.css'
+import Navbar from './components/Navbar.jsx'
+import Hero from './components/Hero.jsx'
 
 function App() {
 
 
   return (
     <>
-      <div className="bg-blue-500 text-white p-4 rounded-lg">
-  Hello Tailwind v3!
-</div>
+      {/* <Navbar /> */}
+      <Hero />
     </>
   )
 }
 
 export default App
+
