@@ -20,7 +20,7 @@ export default function Hero({ setActiveSection }) {
           </h2>
           
           
-          <div className="grid grid-cols-2 gap-4 justify-start max-w-md">
+          <div className="grid grid-cols-2 gap-4 max-w-md">
             <button
               onClick={() =>  window.open('https://github.com/pamal29', '_blank')}
               className="px-8 py-3 text-white rounded-full border border-white w-full"
