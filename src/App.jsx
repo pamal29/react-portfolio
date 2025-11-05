@@ -2,6 +2,7 @@
 // import './App.css'
 import Hero from './components/Hero.jsx'
 import Projects from './components/Projects.jsx'
+import Certificate from './components/Certificates.jsx'
 
 
 function App() {
@@ -11,6 +12,7 @@ function App() {
     <>
       <Hero />
       <Projects />
+      <Certificate />
       
     </>
   )
