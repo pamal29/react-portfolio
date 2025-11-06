@@ -3,6 +3,7 @@
 import Hero from './components/Hero.jsx'
 import Projects from './components/Projects.jsx'
 import Certificate from './components/Certificates.jsx'
+import Contact from './components/Contact.jsx'
 
 
 function App() {
@@ -13,7 +14,7 @@ function App() {
       <Hero />
       <Projects />
       <Certificate />
-      
+      <Contact />
     </>
   )
 }

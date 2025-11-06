@@ -42,7 +42,7 @@ export default function Hero({ setActiveSection }) {
         <div className="flex justify-center md:justify-end">
           <img src='../../public/hero-picture.jpg' 
                alter='picture'
-               className="w-64 h-64 rounded-full object-cover shadow-[0_0_50px_rgba(255,255,255,0.8)]">
+               className="w-64 h-64 rounded-full object-cover">
 
           </img>
     
