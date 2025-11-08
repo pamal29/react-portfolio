@@ -6,7 +6,7 @@ export default function Contact() {
       <form className="flex flex-col gap-6 w-full max-w-[380px] bg-black m-8 p-8 border-4 border-white rounded-2xl">
         <p className="text-[28px] text-white font-semibold relative flex items-center pl-8">
           Connect with Me
-          <span className="absolute left-0 h-[18px] w-[18px] rounded-full bg-blue-600 animate-ping-slow"></span>
+          <span className="absolute left-0 h-[18px] w-[18px] rounded-full bg-white animate-ping-slow"></span>
         </p>
 
 
@@ -59,18 +59,10 @@ export default function Contact() {
         </label>
 
 
-        {/* Submit Button */}
+        
         <button className="outline-none bg-black text-white border-4 border-white py-2 rounded-lg text-[16px] transition">
-          Submit
+          Sent
         </button>
-
-        {/* Sign-in Text */}
-        <p className="text-gray-600 text-sm text-center">
-          Already have an account?{" "}
-          <a href="#" className="text-blue-600 hover:underline">
-            Signin
-          </a>
-        </p>
       </form>
     </div>
   );
