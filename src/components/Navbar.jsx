@@ -44,7 +44,7 @@ export default function PortfolioNavbar() {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden bg-gray-900">
+        <div className="md:hidden bg-black">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             {navItems.map((item) => (
               <a
