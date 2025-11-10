@@ -12,7 +12,7 @@ export default function PortfolioNavbar() {
   ];
 
   return (
-    <nav className="bg-black text-white shadow-lg fixed w-full top-0 z-50">
+    <nav className="bg-white text-black shadow-lg fixed w-full top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-end items-center h-16">
           {/* Desktop Menu */}
@@ -44,7 +44,7 @@ export default function PortfolioNavbar() {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden bg-black">
+        <div className="md:hidden bg-white">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             {navItems.map((item) => (
               <a

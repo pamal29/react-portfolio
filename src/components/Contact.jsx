@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Contact() {
   return (
-    <div className="flex justify-center items-center min-h-screen bg-black px-4">
+    <div className="flex justify-center items-center min-h-screen bg-white px-4">
       <form className="flex flex-col gap-6 w-full max-w-[380px] bg-black m-8 p-8 border-4 border-white rounded-2xl">
         <p className="text-[28px] text-white font-semibold relative flex items-center pl-8">
           Connect with Me

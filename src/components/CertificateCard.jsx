@@ -2,7 +2,7 @@ import React from "react";
 
 export default function ProjectCard({ title, description, image, link }) {
   return (
-    <div className="bg-black border border-white rounded-1xl overflow-hidden">
+    <div className="bg-white border-8 border-black rounded-1xl overflow-hidden">
       <div className="w-full h-48 overflow-hidden">
         <img
           src={image}
@@ -12,7 +12,7 @@ export default function ProjectCard({ title, description, image, link }) {
       </div>
 
       <div className="p-5">
-        <h3 className="text-2xl font-semibold text-white mb-2">{title}</h3>
+        <h3 className="text-2xl font-semibold text-black mb-2">{title}</h3>
         <p className="text-gray-400 mb-4">{description}</p>
 
         {link && (

@@ -3,6 +3,7 @@ import Projects from './components/Projects.jsx'
 import Certificate from './components/Certificates.jsx'
 import Contact from './components/Contact.jsx'
 import Navbar from './components/Navbar.jsx'
+import Skills from './components/Skills.jsx'
 
 function App() {
   return (
@@ -13,6 +14,9 @@ function App() {
       </div>
       <div id="projects">
         <Projects />
+      </div>
+      <div id="projects">
+        <Skills />
       </div>
       <div id="certificates">
         <Certificate />
