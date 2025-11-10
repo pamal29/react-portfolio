@@ -28,11 +28,10 @@ export default function Projects() {
 
   return (
     <section className="min-h-screen bg-white text-black px-6 py-16">
-      <div className="max-w-6xl mx-auto text-center mb-12">
-        <h2 className="text-5xl font-bold bg-clip-text bg-white mb-15">
-          My Projects
-        </h2>
-        <p className="text-2xl text-white mt-5">
+      <div className="max-w-6xl mx-auto text-center mb-4">
+        <h2 className="text-4xl font-bold mb-4 text-center">Projects</h2>
+        <div className="w-24 h-1 bg-black mx-auto mb-4"></div>
+        <p className="text-2xl text-black mt-2">
           Here are some of the projects I’ve worked on recently.
         </p>
       </div>

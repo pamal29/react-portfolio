@@ -1,5 +1,5 @@
 import React from 'react'
-import ProjectCard from './ProjectCard'
+import ProjectCard from './CertificateCard.jsx'
 
 export default function Projects() {
   const projectData = [
@@ -15,9 +15,8 @@ export default function Projects() {
   return (
     <section className="min-h-screen bg-white text-black px-6 py-16">
       <div className="max-w-6xl mx-auto text-center mb-12">
-        <h2 className="text-5xl font-bold bg-clip-text bg-white mb-15">
-          Certificates
-        </h2>
+        <h2 className="text-4xl font-bold mb-2 text-center">Certificates</h2>
+        <div className="w-24 h-1 bg-black mx-auto mb-16"></div>
       </div>
 
       {/* Responsive Grid */}

@@ -2,7 +2,7 @@ import React from "react";
 
 export default function ProjectCard({ title, description, image, link }) {
   return (
-    <div className="bg-white border border-black rounded-xl overflow-hidden flex flex-col h-full">
+    <div className="bg-white border-2 border-black rounded-xl overflow-hidden flex flex-col h-full">
       <div className="w-full h-48 overflow-hidden">
         <img
           src={image}
@@ -20,7 +20,7 @@ export default function ProjectCard({ title, description, image, link }) {
             <div className="absolute -inset-0.5 "></div>
             <button
               onClick={() => window.open(link, "_blank")}
-              className="relative px-8 py-3 bg-white text-black rounded-full border border-black w-full "
+              className="relative px-8 py-3 bg-white text-black rounded-full border-2 border-black w-full hover:bg-black hover:text-white transition-all duration-300"
             >
               View Project
             </button>

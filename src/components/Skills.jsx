@@ -3,9 +3,9 @@ import { Code2, Wind, Coffee, Sparkles, Brain, Zap } from 'lucide-react';
 
 export default function Skills() {
   const skills = [
-    { name: "React", icon: <Code2 className="w-12 h-12" />, status: "proficient" },
-    { name: "Tailwind CSS", icon: <Wind className="w-12 h-12" />, status: "proficient" },
-    { name: "Python", icon: <Zap className="w-12 h-12" />, status: "proficient" },
+    { name: "React", icon: <Code2 className="w-12 h-12" />, status: "basic" },
+    { name: "Tailwind CSS", icon: <Wind className="w-12 h-12" />, status: "basic" },
+    { name: "Python", icon: <Zap className="w-12 h-12" />, status: "basic" },
     { name: "Java", icon: <Coffee className="w-12 h-12" />, status: "basic" },
     { name: "AI", icon: <Brain className="w-12 h-12" />, status: "learning" },
     { name: "Machine Learning", icon: <Sparkles className="w-12 h-12" />, status: "learning" }
@@ -22,7 +22,7 @@ export default function Skills() {
             {[...skills, ...skills, ...skills].map((skill, idx) => (
               <div
                 key={idx}
-                className="flex-shrink-0 w-48 h-48 border-4 border-black flex flex-col items-center justify-center gap-4 hover:bg-black hover:text-white transition-all duration-300 group"
+                className="flex-shrink-0 w-48 h-48 border-4 border-black rounded-2xl flex flex-col items-center justify-center gap-4 hover:bg-black hover:text-white transition-all duration-300 group"
               >
                 <div className="group-hover:scale-110 transition-transform">
                   {skill.icon}
