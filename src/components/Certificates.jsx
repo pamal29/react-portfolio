@@ -7,7 +7,7 @@ export default function Projects() {
       id: 1,
       title: "Supervised Machine Learning",
       description: "Certificate for completed the Supervised Machine Learning: Regression and Classification Course by DeepLearning.AI and Stanford Online on Coursera",
-      image: "../../public/certificate1.png",
+      image: '/certificate1.png',
       link: "https://www.coursera.org/account/accomplishments/verify/J7YA4OAMV0BV",
     },
   ];

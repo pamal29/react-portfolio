@@ -15,7 +15,7 @@ export default function Hero({ setActiveSection }) {
             Pamal Pahasara
           </p>
           
-          <h2 className="text-7xl font-bold mb-8 text-black bg-clip-text">
+          <h2 className="font-sans text-7xl font-bold mb-8 text-black bg-clip-text">
            Creative Developer 
           </h2>
           
@@ -23,13 +23,13 @@ export default function Hero({ setActiveSection }) {
           <div className="grid grid-cols-2 gap-4 max-w-md">
             <button
               onClick={() =>  window.open('https://github.com/pamal29', '_blank')}
-              className="px-8 py-3 text-black rounded-full border border-black w-full"
+              className="relative px-8 py-3 bg-white text-black rounded-full border-2 border-black w-full hover:bg-black hover:text-white transition-all duration-300"
             >
               View Github
             </button>
             <button
               onClick={() => setActiveSection && setActiveSection('projects')}
-              className="px-8 py-3 text-black rounded-full border border-black w-full"
+              className="relative px-8 py-3 bg-white text-black rounded-full border-2 border-black w-full hover:bg-black hover:text-white transition-all duration-300"
             >
               Download CV
             </button>
@@ -40,7 +40,7 @@ export default function Hero({ setActiveSection }) {
 
   
         <div className="flex justify-center md:justify-end">
-          <img src='../../public/hero-picture.jpg' 
+          <img src='/hero-picture.jpg' 
                alter='picture'
                className="w-64 h-64 rounded-full object-cover">
 
