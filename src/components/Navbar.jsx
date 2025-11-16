@@ -12,7 +12,7 @@ export default function PortfolioNavbar() {
   ];
 
   return (
-    <nav className="bg-white text-black shadow-lg fixed w-full top-0 z-50">
+    <nav className="bg-white text-black shadow-lg fixed w-full top-0 z-50 dark:bg-black dark:text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-end items-center h-16">
           {/* Desktop Menu */}
@@ -34,7 +34,7 @@ export default function PortfolioNavbar() {
           <div className="md:hidden ml-auto">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="inline-flex items-center justify-center p-2 rounded-md focus:outline-none"
+              className="inline-flex items-center justify-center p-2 rounded-md focus:outline-none dark:text-white"
             >
               {isOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
@@ -44,7 +44,7 @@ export default function PortfolioNavbar() {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden bg-white">
+        <div className="md:hidden bg-white dark:bg-black">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             {navItems.map((item) => (
               <a
