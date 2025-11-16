@@ -99,24 +99,35 @@ export default function Skills() {
   ];
 
   return (
-    <div className="min-h-screen bg-white text-black p-8 flex items-center justify-center overflow-hidden">
-      <div className="max-w-8xl w-full">
-        <h2 className="text-4xl font-bold mb-2 text-center">Skills & Expertise</h2>
-        <div className="w-24 h-1 bg-black mx-auto mb-16"></div>
+    <div className="min-h-screen bg-white text-black p-6 sm:p-10 flex items-center justify-center overflow-hidden">
+      <div className="max-w-7xl w-full">
+        <h2 className="text-3xl sm:text-4xl font-bold mb-2 text-center">Skills & Expertise</h2>
+        <div className="w-20 sm:w-24 h-1 bg-black mx-auto mb-10 sm:mb-16"></div>
 
         <div className="relative overflow-visible">
-          <div className="flex gap-8 animate-scroll">
+          <div className="flex gap-4 sm:gap-8 animate-scroll">
             {[...skills, ...skills, ...skills].map((skill, idx) => (
               <div
                 key={idx}
-                className="flex-shrink-0 w-48 h-48 border-4 border-black rounded-2xl flex flex-col items-center justify-center gap-4 hover:bg-black hover:text-white transition-all duration-300 group cursor-pointer"
+                className="
+                  flex-shrink-0 
+                  w-32 h-32 
+                  sm:w-40 sm:h-40 
+                  md:w-48 md:h-48 
+                  border-4 border-black rounded-2xl 
+                  flex flex-col items-center justify-center 
+                  gap-2 sm:gap-4 
+                  hover:bg-black hover:text-white 
+                  transition-all duration-300 group cursor-pointer
+                "
               >
-                <div className="group-hover:scale-110 transition-transform group-hover:brightness-0 group-hover:invert">
+                <div className="group-hover:scale-110 transition-transform group-hover:brightness-0 group-hover:invert w-10 h-10 sm:w-12 sm:h-12">
                   {skill.svg}
                 </div>
+
                 <div className="text-center">
-                  <p className="font-bold text-lg">{skill.name}</p>
-                  <p className="text-xs uppercase tracking-wider mt-1 opacity-60">
+                  <p className="font-bold text-sm sm:text-lg">{skill.name}</p>
+                  <p className="text-[10px] sm:text-xs uppercase tracking-wider mt-1 opacity-60">
                     {skill.status === 'proficient' && 'Proficient'}
                     {skill.status === 'basic' && 'Basic'}
                     {skill.status === 'learning' && 'Learning'}
@@ -129,18 +140,12 @@ export default function Skills() {
 
         <style jsx>{`
           @keyframes scroll {
-            0% {
-              transform: translateX(0);
-            }
-            100% {
-              transform: translateX(calc(-256px * ${skills.length} - 32px * ${skills.length}));
-            }
+            0% { transform: translateX(0); }
+            100% { transform: translateX(calc(-256px * ${skills.length})); }
           }
-          
           .animate-scroll {
             animation: scroll 30s linear infinite;
           }
-          
           .animate-scroll:hover {
             animation-play-state: paused;
           }

@@ -10,10 +10,7 @@ export default function ContactForm() {
   const [submitted, setSubmitted] = useState(false);
 
   const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
+    setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
   const handleSubmit = (e) => {
@@ -26,23 +23,32 @@ export default function ContactForm() {
   };
 
   return (
-    <div className="min-h-screen bg-white text-black p-8 flex items-center justify-center">
+    <div className="min-h-screen bg-white text-black p-6 sm:p-10 flex items-center justify-center">
       <div className="max-w-2xl w-full">
-        <h2 className="text-4xl font-bold mb-2 text-center">Get In Touch</h2>
-        <div className="w-24 h-1 bg-black mx-auto mb-4"></div>
-        <p className="text-center mb-12 opacity-70">
-          Have a project in mind? Let's work together!
+        
+        {/* Heading */}
+        <h2 className="text-3xl sm:text-4xl font-bold mb-2 text-center">
+          Get In Touch
+        </h2>
+        <div className="w-20 sm:w-24 h-1 bg-black mx-auto mb-4"></div>
+        <p className="text-center mb-10 sm:mb-12 opacity-70 text-sm sm:text-base">
+          Have a project in mind? Let’s work together!
         </p>
 
+        {/* SUCCESS MESSAGE */}
         {submitted ? (
-          <div className="border-4 border-black p-12 text-center bg-black text-white">
-            <Send className="w-16 h-16 mx-auto mb-4" />
-            <h3 className="text-2xl font-bold mb-2">Message Sent!</h3>
-            <p>Thank you for reaching out. I'll get back to you soon.</p>
+          <div className="border-4 border-black p-10 sm:p-12 text-center bg-black text-white rounded-xl">
+            <Send className="w-14 h-14 sm:w-16 sm:h-16 mx-auto mb-4" />
+            <h3 className="text-xl sm:text-2xl font-bold mb-2">Message Sent!</h3>
+            <p className="text-sm sm:text-base">Thank you for reaching out. I’ll get back to you soon.</p>
           </div>
         ) : (
+
+          /* FORM */
           <form onSubmit={handleSubmit} className="space-y-6">
-            <div className="relative group">
+            
+            {/* NAME */}
+            <div className="relative">
               <User className="absolute left-4 top-4 w-5 h-5 opacity-50" />
               <input
                 type="text"
@@ -51,11 +57,12 @@ export default function ContactForm() {
                 onChange={handleChange}
                 placeholder="Your Name"
                 required
-                className="w-full border-4 border-black  rounded-xl p-4 pl-12 text-lg focus:bg-black focus:text-white outline-none transition-all duration-300"
+                className="w-full border-4 border-black rounded-xl p-4 pl-12 text-base sm:text-lg focus:bg-black focus:text-white transition-all duration-300"
               />
             </div>
 
-            <div className="relative group">
+            {/* EMAIL */}
+            <div className="relative">
               <Mail className="absolute left-4 top-4 w-5 h-5 opacity-50" />
               <input
                 type="email"
@@ -64,11 +71,12 @@ export default function ContactForm() {
                 onChange={handleChange}
                 placeholder="Your Email"
                 required
-                className="w-full border-4 border-black rounded-xl p-4 pl-12 text-lg focus:bg-black focus:text-white outline-none transition-all duration-300"
+                className="w-full border-4 border-black rounded-xl p-4 pl-12 text-base sm:text-lg focus:bg-black focus:text-white transition-all duration-300"
               />
             </div>
 
-            <div className="relative group">
+            {/* MESSAGE */}
+            <div className="relative">
               <MessageSquare className="absolute left-4 top-4 w-5 h-5 opacity-50" />
               <textarea
                 name="message"
@@ -76,24 +84,25 @@ export default function ContactForm() {
                 onChange={handleChange}
                 placeholder="Your Message"
                 required
-                rows="6"
-                className="w-full border-4 border-black rounded-xl p-4 pl-12 text-lg focus:bg-black focus:text-white outline-none transition-all duration-300 resize-none"
+                rows="5"
+                className="w-full border-4 border-black rounded-xl p-4 pl-12 text-base sm:text-lg focus:bg-black focus:text-white transition-all duration-300 resize-none"
               ></textarea>
             </div>
 
+            {/* SUBMIT BUTTON */}
             <button
               type="submit"
-              className="w-full border-4 border-black rounded-xl p-4 text-lg font-bold bg-white text-black hover:bg-black hover:text-white transition-all duration-300 flex items-center justify-center gap-3 group"
+              className="w-full border-4 border-black rounded-xl p-4 text-base sm:text-lg font-bold bg-white text-black hover:bg-black hover:text-white transition-all duration-300 flex items-center justify-center gap-3"
             >
               <span>Send Message</span>
-              <Send className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              <Send className="w-5 h-5" />
             </button>
           </form>
         )}
 
-        <div className="mt-12 text-center">
-          <p className="text-sm opacity-70">
-            I typically respond within 24-48 hours
+        <div className="mt-10 text-center">
+          <p className="text-xs sm:text-sm opacity-70">
+            I typically respond within 24–48 hours
           </p>
         </div>
       </div>

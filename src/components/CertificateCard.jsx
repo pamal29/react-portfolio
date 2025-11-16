@@ -3,7 +3,7 @@ import React from "react";
 export default function ProjectCard({ title, description, image, link }) {
   return (
     <div className="bg-white border-2 border-black rounded-xl overflow-hidden flex flex-col h-full m-4">
-      <div className="w-full h-48 overflow-hidden">
+      <div className="w-full h-40 sm:h-48 overflow-hidden">
         <img
           src={image}
           alt={title}
@@ -11,9 +11,9 @@ export default function ProjectCard({ title, description, image, link }) {
         />
       </div>
 
-      <div className="p-5 flex flex-col flex-grow">
-        <h3 className="text-2xl font-semibold text-black mb-2">{title}</h3>
-        <p className="text-black-500 mb-4 flex-grow">{description}</p>
+      <div className="p-4 sm:p-5 flex flex-col flex-grow">
+        <h3 className="text-xl font-semibold text-black mb-2">{title}</h3>
+        <p className="text-black-500 mb-4 flex-grow sm:text-base">{description}</p>
 
         {link && (
           <div className="relative group mt-auto">
