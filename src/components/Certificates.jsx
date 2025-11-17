@@ -13,10 +13,10 @@ export default function Projects() {
   ];
 
   return (
-    <section className="min-h-screen bg-white text-black px-6 py-16">
+    <section className="min-h-screen bg-white text-black dark:bg-black dark:text-white px-6 py-16">
       <div className="max-w-6xl mx-auto text-center mb-12">
         <h2 className="text-4xl font-bold mb-2 text-center">Certificates</h2>
-        <div className="w-24 h-1 bg-black mx-auto mb-16"></div>
+        <div className="w-24 h-1 bg-black dark:bg-white mx-auto mb-16"></div>
       </div>
 
       {/* Responsive Grid */}
