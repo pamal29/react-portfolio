@@ -1,5 +1,7 @@
 import React from 'react'
 import ProjectCard from './CertificateCard.jsx'
+import {FadeIn, StaggerContainer} from '../utils/ScrollAnimations'
+
 
 export default function Projects() {
   const projectData = [
@@ -14,13 +16,14 @@ export default function Projects() {
 
   return (
     <section className="min-h-screen bg-white text-black dark:bg-black dark:text-white px-6 py-16">
-      <div className="max-w-6xl mx-auto text-center mb-12">
-        <h2 className="text-4xl font-bold mb-2 text-center">Certificates</h2>
-        <div className="w-24 h-1 bg-black dark:bg-white mx-auto mb-16"></div>
-      </div>
-
+      <FadeIn>
+        <div className="max-w-6xl mx-auto text-center mb-12">
+          <h2 className="text-4xl font-bold mb-2 text-center">Certificates</h2>
+          <div className="w-24 h-1 bg-black dark:bg-white mx-auto mb-16"></div>
+        </div>
+      </FadeIn>
       {/* Responsive Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+      <StaggerContainer staggerDelay={200} className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
         {projectData.map((project) => (
           <ProjectCard
             key={project.id}
@@ -30,7 +33,7 @@ export default function Projects() {
             link={project.link}
           />
         ))}
-      </div>
+      </StaggerContainer>
     </section>
   );
 }
