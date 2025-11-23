@@ -1,57 +1,34 @@
-import React from 'react';
-import { FadeIn, SlideInLeft, SlideInRight } from '../utils/ScrollAnimations';
+import { Github, Download } from "lucide-react";
 
-export default function Hero() {
+export default function Hero({ handleDownloadCV }) {
   return (
-    <section className="min-h-screen flex items-center justify-center bg-white dark:bg-black px-4 sm:px-8 pt-24">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center max-w-6xl w-full">
-        
-        {/* LEFT TEXT SECTION */}
-        <SlideInLeft duration={800}>
-          <div className="text-center md:text-left">
-            <FadeIn delay={200}>
-              <p className="text-lg sm:text-xl text-black dark:text-white mb-4 sm:mb-6">
-                Hi I am
-              </p>
-            </FadeIn>
+    <section id="hero" className="text-center pt-8 pb-12">
+      <p className="text-lg mb-2 opacity-70 animate-fade-in-down">Hi I am</p>
 
-            <FadeIn delay={400}>
-              <p className="text-4xl sm:text-5xl text-black dark:text-white font-semibold mb-4">
-                Pamal Pahasara
-              </p>
-            </FadeIn>
+      <h1 className="text-6xl font-bold mb-2 bg-gradient-to-r from-gray-300 to-orange-400 bg-clip-text text-transparent animate-fade-in-up">
+        Pamal Pahasara
+      </h1>
 
-            <FadeIn delay={600}>
-              <h2 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-6 text-black dark:text-white">
-                Creative Developer
-              </h2>
-            </FadeIn>
+      <h2 className="text-3xl font-semibold mb-8 opacity-90 animate-fade-in">
+        Creative Developer
+      </h2>
 
-            <FadeIn delay={800}>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-md mx-auto md:mx-0">
-                <button className="px-8 py-3 bg-white text-black rounded-full border-2 border-black w-full hover:bg-black hover:text-white transition-all duration-300
-                                    dark:bg-black dark:text-white dark:border-white dark:hover:bg-white dark:hover:text-black">
-                  View Github
-                </button>
-                <button className="px-8 py-3 bg-white text-black rounded-full border-2 border-black w-full hover:bg-black hover:text-white transition-all duration-300
-                                    dark:bg-black dark:text-white dark:border-white dark:hover:bg-white dark:hover:text-black">
-                  Download CV
-                </button>
-              </div>
-            </FadeIn>
-          </div>
-        </SlideInLeft>
+      <div className="flex gap-4 justify-center flex-wrap animate-fade-in-up animation-delay-500">
+        <button
+          onClick={() => window.open('https://github.com/pamal29', '_blank')}
+          className="px-6 py-3 bg-gray-700 hover:bg-orange-500 rounded-full flex items-center gap-2 transition-all duration-300 hover:scale-110"
+        >
+          <Github className="w-5 h-5" />
+          View Github
+        </button>
 
-        {/* RIGHT IMAGE SECTION */}
-        <SlideInRight duration={800}>
-          <div className="flex justify-center md:justify-end">
-            <img
-              src="/hero-picture.jpg"
-              alt="picture"
-              className="w-48 h-48 sm:w-64 sm:h-64 md:w-72 md:h-72 lg:w-80 lg:h-80 rounded-full object-cover shadow-lg"
-            />
-          </div>
-        </SlideInRight>
+        <button
+          onClick={handleDownloadCV}
+          className="px-6 py-3 bg-orange-600 hover:bg-orange-500 rounded-full flex items-center gap-2 transition-all duration-300 hover:scale-110"
+        >
+          <Download className="w-5 h-5" />
+          Download CV
+        </button>
       </div>
     </section>
   );
