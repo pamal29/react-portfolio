@@ -6,12 +6,6 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Dark mode styles */
-.dark {
-  background-color: #000000;
-  color: #ffffff;
-}
-
-.dark body {
-  background-color: #000000;
+body {
+  @apply bg-black text-white;
 }
