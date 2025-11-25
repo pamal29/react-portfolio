@@ -13,12 +13,18 @@ export default function App() {
   });
 
   const skills = [
-    { name: "React", status: "basic" },
-    { name: "Tailwind CSS", status: "basic" },
-    { name: "Python", status: "basic" },
-    { name: "Java", status: "basic" },
-    { name: "AI", status: "learning" },
-    { name: "Machine Learning", status: "learning" },
+    { name: "React", status: "Expert" },
+    { name: "Next.js", status: "Expert" },
+    { name: "TypeScript", status: "Advanced" },
+    { name: "Node.js", status: "Advanced" },
+    { name: "Python", status: "Intermediate" },
+    { name: "UI/UX Design", status: "Advanced" },
+    { name: "Cloud (AWS)", status: "Intermediate" },
+    { name: "MongoDB", status: "Advanced" },
+    { name: "PostgreSQL", status: "Intermediate" },
+    { name: "Docker", status: "Intermediate" },
+    { name: "Git", status: "Expert" },
+    { name: "Tailwind CSS", status: "Expert" }
   ];
 
   const projects = [
@@ -75,11 +81,13 @@ React, Tailwind, Python, Java, AI, ML
   };
 
   return (
-    <div className="relative max-w-6xl mx-auto">
+  <div className="bg-black min-h-screen w-full">
+    <div className="relative max-w-6xl mx-auto px-4">
       <BackgroundBlobs />
       <Navbar scrollToSection={scrollToSection} />
 
-      <div className="p-8 md:p-12 space-y-16 bg-gray-900/30 backdrop-blur-xl border border-gray-400/30 rounded-3xl mt-10 shadow-xl">
+      <div className="p-8 md:p-12 space-y-16 bg-gray-900/30 backdrop-blur-xl 
+                      border border-gray-400/30 rounded-3xl mt-10 shadow-xl relative z-10 w-full">
         <Hero handleDownloadCV={handleDownloadCV} />
         <Skills skills={skills} />
         <Projects projects={projects} />
@@ -91,7 +99,9 @@ React, Tailwind, Python, Java, AI, ML
         />
       </div>
     </div>
-  );
+  </div>
+);
+
 }
 
 
