@@ -8,11 +8,10 @@ export default function Contact({
 }) {
   return (
     <section id="contact" className="animate-fade-in">
-      <h2 className="text-4xl font-bold text-center bg-gradient-to-r from-gray-300 to-orange-400 bg-clip-text text-transparent">
+      <h2 className="text-4xl font-bold text-center bg-gradient-to-r from-gray-300 to-orange-400 bg-clip-text text-transparent mb-8">
         Get In Touch
       </h2>
 
-      <div className="w-24 h-1 bg-gradient-to-r from-gray-500 to-orange-500 mx-auto mb-6"></div>
 
       {submitted ? (
         <div className="bg-gray-800/50 border-2 border-orange-400 p-12 text-center rounded-2xl animate-scale-in">
