@@ -86,7 +86,7 @@ React, Tailwind, Python, Java, AI, ML
       <BackgroundBlobs />
       <Navbar scrollToSection={scrollToSection} />
 
-      <div className="p-8 md:p-12 space-y-16 bg-cardDark backdrop-blur-xl 
+      <div className="p-8 md:p-12 space-y-16 bg-stone-950 backdrop-blur-xl 
                       border border-gray-400/30 rounded-3xl mt-10 shadow-xl relative z-10 w-full">
         <Hero handleDownloadCV={handleDownloadCV} />
         <Skills skills={skills} />

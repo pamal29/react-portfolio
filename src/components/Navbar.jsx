@@ -16,7 +16,7 @@ export default function Navbar({ scrollToSection }) {
           onClick={() => scrollToSection(item.section)}
           className="group relative block"
         >
-          <div className="w-12 h-12 bg-gray-800/50 backdrop-blur-sm border-2 border-orange-400/50 rounded-full flex items-center justify-center hover:scale-125 hover:bg-orange-500 hover:border-orange-300 transition-all duration-300">
+          <div className="w-12 h-12 bg-gray-800/50 backdrop-blur-sm border-2 border-neonPurple rounded-full flex items-center justify-center hover:scale-125 hover:bg-neonPurple hover:border-white transition-all duration-300">
             <item.icon className="w-5 h-5" />
           </div>
           <span className="absolute right-16 top-1/2 -translate-y-1/2 bg-gray-800 px-3 py-1 rounded-lg text-sm opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
