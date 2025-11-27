@@ -28,10 +28,10 @@ export default function Skills({ skills = [] }) {
               <div
                 key={skill.name}
                 className="flex items-center gap-2 px-5 py-3 bg-gray-800/50 
-                           rounded-full border border-gray-600 hover:border-orange-400 
+                           rounded-full border border-gray-600 hover:border-neonPurple 
                            hover:bg-gray-700/50 transition-all duration-300 cursor-pointer"
               >
-                <Icon className="w-5 h-5 text-orange-400" />
+                <Icon className="w-5 h-5 text-neonPurple" />
                 <span className="text-base font-medium">{skill.name}</span>
               </div>
             );
