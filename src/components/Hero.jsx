@@ -30,7 +30,7 @@ export default function Hero({ handleDownloadCV }) {
           onClick={() => window.open('https://github.com/pamal29', '_blank')}
           className="px-6 py-3 rounded-full flex items-center gap-2 
                      bg-black text-white border border-white
-                     transition-all duration-300 hover:scale-110"
+                     transition-all duration-300 hover:scale-110 hover:border-neonPurple"
         >
           <Github className="w-5 h-5" />
           View GitHub
@@ -40,7 +40,7 @@ export default function Hero({ handleDownloadCV }) {
           onClick={handleDownloadCV}
           className="px-6 py-3 rounded-full flex items-center gap-2 
                      bg-black text-white border border-white
-                     transition-all duration-300 hover:scale-110"
+                     transition-all duration-300 hover:scale-110 hover:border-neonPurple"
         >
           <Download className="w-5 h-5" />
           Download CV
