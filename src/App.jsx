@@ -7,6 +7,8 @@ import Projects from "./components/Projects";
 import ContactForm from "./components/Contact";
 import Social from "./components/Social";
 import Education  from "./components/Education";
+import GithubStats from "./components/GithubStats";
+import { Github } from "lucide-react";
 
 export default function App() {
   const [submitted, setSubmitted] = useState(false);
@@ -94,6 +96,7 @@ React, Tailwind, Python, Java, AI, ML
         <Education />
         <Skills skills={skills} />
         <Projects projects={projects} />
+        <GithubStats />
         <ContactForm
           submitted={submitted}
           formData={formData}
