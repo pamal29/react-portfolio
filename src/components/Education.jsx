@@ -23,19 +23,14 @@ export default function Education() {
 
   const certifications = [
     {
-      name: "AWS Certified Cloud Practitioner",
-      issuer: "Amazon Web Services",
-      year: "2024"
-    },
-    {
-      name: "React Advanced Concepts",
-      issuer: "Udemy",
-      year: "2023"
-    },
-    {
-      name: "Python for Data Science",
+      name: "Supervised Machine Learning: Regression and Classification",
       issuer: "Coursera",
-      year: "2023"
+      year: "2025"
+    },
+    {
+      name: "Advanced Learning Algorithms",
+      issuer: "Coursera",
+      year: "2025"
     }
   ];
 
