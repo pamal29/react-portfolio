@@ -96,16 +96,7 @@ export default function GithubStats() {
           </div>
         </div>
 
-        {/* GitHub Activity Graph */}
-        <div className="bg-stone-900/50 backdrop-blur-sm border border-gray-400/20 rounded-2xl p-6
-                       transition-all duration-300 hover:border-neonPurple/50">
-          <h3 className="text-xl font-semibold text-neonPurple mb-4">Contribution Graph</h3>
-          <img
-            src={`https://github-readme-activity-graph.vercel.app/graph?username=${username}&theme=react-dark&hide_border=true&bg_color=1c1917&color=a855f7&line=a855f7&point=e5e5e5`}
-            alt="Contribution Graph"
-            className="w-full rounded-lg"
-          />
-        </div>
+        
 
         {/* Call to Action */}
         <div className="text-center">
