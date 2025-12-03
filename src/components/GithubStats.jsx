@@ -71,16 +71,6 @@ export default function GithubStats() {
             />
           </div>
 
-          {/* Top Languages Card */}
-          <div className="bg-stone-900/50 backdrop-blur-sm border border-gray-400/20 rounded-2xl p-6
-                         transition-all duration-300 hover:border-neonPurple/50">
-            <h3 className="text-xl font-semibold text-neonPurple mb-4">Most Used Languages</h3>
-            <img
-              src={`https://github-readme-stats.vercel.app/api/top-langs/?username=${username}&layout=compact&theme=radical&hide_border=true&bg_color=1c1917&title_color=a855f7&text_color=e5e5e5`}
-              alt="Top Languages"
-              className="w-full rounded-lg"
-            />
-          </div>
         </div>
 
         {/* GitHub Streak */}
