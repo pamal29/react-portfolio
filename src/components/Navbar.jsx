@@ -1,11 +1,14 @@
-import { Home, Code, Briefcase, Phone } from "lucide-react";
+import { label } from "framer-motion/client";
+import { Home, Code, Briefcase, Phone, Github} from "lucide-react";
 
 export default function Navbar({ scrollToSection }) {
   const navItems = [
     { icon: Home, label: "Home", section: "hero" },
     { icon: Code, label: "Skills", section: "skills" },
     { icon: Briefcase, label: "Projects", section: "projects" },
-    { icon: Phone, label: "Contact", section: "contact" }
+    {icon:Github, label:"Github", section:"github"},
+    { icon: Phone, label: "Contact", section: "contact" },
+
   ];
 
   return (
