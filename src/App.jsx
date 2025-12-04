@@ -9,6 +9,7 @@ import Social from "./components/Social";
 import Education  from "./components/Education";
 import GithubStats from "./components/GithubStats";
 import { Github } from "lucide-react";
+import About from './components/About'
 
 export default function App() {
   const [submitted, setSubmitted] = useState(false);
@@ -93,6 +94,7 @@ React, Tailwind, Python, Java, AI, ML
       <div className="p-8 md:p-12 space-y-16 bg-stone-950 backdrop-blur-xl 
                       border border-gray-400/30 rounded-3xl mt-10 shadow-xl relative z-10 w-full">
         <Hero handleDownloadCV={handleDownloadCV} />
+        <About />
         <Education />
         <Skills skills={skills} />
         <Projects projects={projects} />
