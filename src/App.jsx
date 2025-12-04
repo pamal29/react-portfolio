@@ -96,7 +96,6 @@ React, Tailwind, Python, Java, AI, ML
         <Hero handleDownloadCV={handleDownloadCV} />
         <About />
         <Education />
-        <Skills skills={skills} />
         <Projects projects={projects} />
         <GithubStats />
         <ContactForm
