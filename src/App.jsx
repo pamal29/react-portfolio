@@ -6,15 +6,16 @@ import Skills from "./components/Skills";
 import Projects from "./components/Projects";
 import ContactForm from "./components/Contact";
 import Social from "./components/Social";
-import Education  from "./components/Education";
+import Education from "./components/Education";
 import GithubStats from "./components/GithubStats";
-import { Github } from "lucide-react";
-import About from './components/About'
+import About from "./components/About";
 
 export default function App() {
   const [submitted, setSubmitted] = useState(false);
   const [formData, setFormData] = useState({
-    name: "", email: "", message: ""
+    name: "",
+    email: "",
+    message: "",
   });
 
   const skills = [
@@ -29,7 +30,7 @@ export default function App() {
     { name: "PostgreSQL", status: "Intermediate" },
     { name: "Docker", status: "Intermediate" },
     { name: "Git", status: "Expert" },
-    { name: "Tailwind CSS", status: "Expert" }
+    { name: "Tailwind CSS", status: "Expert" },
   ];
 
   const projects = [
@@ -37,20 +38,20 @@ export default function App() {
       title: "Movie Recommendation Website",
       description: "A Movie Recommendation site built with Python",
       link: "https://github.com/pamal29/Movie-Recommendations",
-      tech: "Python"
+      tech: "Python",
     },
     {
       title: "Movie Streaming Website",
       description: "Responsive movie streaming website",
       link: "https://github.com/pamal29/Movie-Stream-Website",
-      tech: "HTML/CSS"
+      tech: "HTML/CSS",
     },
     {
       title: "Snake Game",
       description: "Classic Snake Game built in Java",
       link: "https://github.com/pamal29/snakeGame",
-      tech: "Java"
-    }
+      tech: "Java",
+    },
   ];
 
   const handleSubmit = () => {
@@ -64,18 +65,44 @@ export default function App() {
   };
 
   const handleDownloadCV = () => {
-    const content = `
-Pamal Pahasara
-Creative Developer
+    const content = `PAMAL PAHASARA
+Full Stack Developer & AI Enthusiast
+========================================
 
-Skills:
-React, Tailwind, Python, Java, AI, ML
-    `;
+CONTACT
+• GitHub  : https://github.com/pamal29
+• Email   : [your email here]
+• Location: Sri Lanka
+
+EDUCATION
+• BSc Information Systems — Sabaragamuwa University of Sri Lanka (2023–2028)
+
+CERTIFICATIONS
+• Supervised Machine Learning: Regression and Classification — Coursera (2025)
+• Advanced Learning Algorithms — Coursera (2025)
+
+SKILLS
+• Languages  : JavaScript, TypeScript, Python, Java
+• Frontend   : React, Next.js, Tailwind CSS, UI/UX Design
+• Backend    : Node.js
+• Databases  : MongoDB, PostgreSQL
+• DevOps     : Docker, Git, Cloud (AWS)
+
+PROJECTS
+• Movie Recommendation Website (Python)
+  https://github.com/pamal29/Movie-Recommendations
+
+• Movie Streaming Website (HTML/CSS)
+  https://github.com/pamal29/Movie-Stream-Website
+
+• Snake Game (Java)
+  https://github.com/pamal29/snakeGame
+`;
     const blob = new Blob([content], { type: "text/plain" });
     const url = URL.createObjectURL(blob);
     const a = document.createElement("a");
     a.href = url;
-    a.download = "Pamal_CV.txt";
+    a.download = "Pamal_Pahasara_CV.txt";
     a.click();
     URL.revokeObjectURL(url);
   };
@@ -86,30 +113,30 @@ React, Tailwind, Python, Java, AI, ML
   };
 
   return (
-  <div className="bg-black min-h-screen w-full">
-    <div className="relative max-w-6xl mx-auto px-4">
-      <BackgroundBlobs />
-      <Navbar scrollToSection={scrollToSection} />
+    <div className="bg-black min-h-screen w-full">
+      <div className="relative max-w-6xl mx-auto px-4">
+        <BackgroundBlobs />
+        <Navbar scrollToSection={scrollToSection} />
 
-      <div className="p-8 md:p-12 space-y-16 bg-stone-950 backdrop-blur-xl 
-                      border border-gray-400/30 rounded-3xl mt-10 shadow-xl relative z-10 w-full">
-        <Hero handleDownloadCV={handleDownloadCV} />
-        <About />
-        <Education />
-        <Projects projects={projects} />
-        <GithubStats />
-        <ContactForm
-          submitted={submitted}
-          formData={formData}
-          setFormData={setFormData}
-          handleSubmit={handleSubmit}
-        />
-        <Social />
+        <div
+          className="p-8 md:p-12 space-y-16 bg-stone-950 backdrop-blur-xl
+                      border border-gray-400/30 rounded-3xl mt-10 shadow-xl relative z-10 w-full"
+        >
+          <Hero handleDownloadCV={handleDownloadCV} />
+          <About />
+          <Skills skills={skills} />        {/* ✅ Fixed: Skills was defined but never rendered */}
+          <Education />
+          <Projects projects={projects} />
+          <GithubStats />
+          <ContactForm
+            submitted={submitted}
+            formData={formData}
+            setFormData={setFormData}
+            handleSubmit={handleSubmit}
+          />
+          <Social />
+        </div>
       </div>
     </div>
-  </div>
-);
-
+  );
 }
-
-
