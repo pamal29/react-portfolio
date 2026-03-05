@@ -1,37 +1,38 @@
-import { GraduationCap, Calendar, MapPin, Award } from "lucide-react";
+import { GraduationCap, Calendar, MapPin, Award, BadgeCheck } from "lucide-react";
 
 export default function Education() {
   const education = [
     {
-      degree: "Information System",
-      institution: "Sabaragamuwa Univarsity",
-      location: "Sabaragamuwa, Sri lanka",
-      period: "2023 - 2028",
-      gpa: "_",
+      degree: "Bachelor of Science in Information Systems",
+      institution: "Sabaragamuwa University of Sri Lanka",
+      location: "Sabaragamuwa, Sri Lanka",
+      period: "2023 – 2028",
+      status: "Currently Pursuing",
       achievements: [
-        "_",
+        "Actively developing skills in full-stack development and machine learning",
+        "Completed two Coursera specialisations alongside undergraduate studies",
       ],
       coursework: [
         "Data Structures & Algorithms",
         "Web Development",
         "Machine Learning",
         "Software Engineering",
-        "Cloud Computing"
-      ]
-    }
+        "Cloud Computing",
+      ],
+    },
   ];
 
   const certifications = [
     {
       name: "Supervised Machine Learning: Regression and Classification",
-      issuer: "Coursera",
-      year: "2025"
+      issuer: "Coursera · DeepLearning.AI",
+      year: "2025",
     },
     {
       name: "Advanced Learning Algorithms",
-      issuer: "Coursera",
-      year: "2025"
-    }
+      issuer: "Coursera · DeepLearning.AI",
+      year: "2025",
+    },
   ];
 
   return (
@@ -53,9 +54,19 @@ export default function Education() {
                 <GraduationCap className="w-6 h-6 text-neonPurple" />
               </div>
               <div className="flex-1">
-                <h3 className="text-2xl font-bold text-white mb-2">
-                  {edu.degree}
-                </h3>
+                <div className="flex flex-wrap items-center gap-3 mb-2">
+                  <h3 className="text-2xl font-bold text-white">
+                    {edu.degree}
+                  </h3>
+                  {/* "Currently Pursuing" badge */}
+                  {edu.status && (
+                    <span className="px-3 py-1 text-xs font-semibold rounded-full
+                                     bg-neonPurple/20 text-neonPurple border border-neonPurple/40
+                                     animate-pulse">
+                      {edu.status}
+                    </span>
+                  )}
+                </div>
                 <p className="text-lg text-textLight/90 font-semibold mb-2">
                   {edu.institution}
                 </p>
@@ -68,9 +79,6 @@ export default function Education() {
                     <Calendar className="w-4 h-4" />
                     {edu.period}
                   </span>
-                  <span className="text-neonPurple font-semibold">
-                    GPA: {edu.gpa}
-                  </span>
                 </div>
               </div>
             </div>
@@ -79,7 +87,7 @@ export default function Education() {
             <div className="mb-4">
               <h4 className="text-lg font-semibold text-neonPurple mb-3 flex items-center gap-2">
                 <Award className="w-5 h-5" />
-                Achievements
+                Highlights
               </h4>
               <ul className="space-y-2">
                 {edu.achievements.map((achievement, i) => (
@@ -112,9 +120,12 @@ export default function Education() {
         ))}
 
         {/* Certifications */}
-        <div className="bg-stone-900/50 backdrop-blur-sm border border-gray-400/20 rounded-2xl p-8
-                       transition-all duration-300 hover:border-neonPurple/50 hover:shadow-lg hover:shadow-neonPurple/10">
-          <h3 className="text-2xl font-bold text-neonPurple mb-6">
+        <div
+          className="bg-stone-900/50 backdrop-blur-sm border border-gray-400/20 rounded-2xl p-8
+                     transition-all duration-300 hover:border-neonPurple/50 hover:shadow-lg hover:shadow-neonPurple/10"
+        >
+          <h3 className="text-2xl font-bold text-neonPurple mb-6 flex items-center gap-2">
+            <BadgeCheck className="w-6 h-6" />
             Certifications
           </h3>
           <div className="grid md:grid-cols-2 gap-4">
