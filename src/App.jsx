@@ -35,22 +35,25 @@ export default function App() {
 
   const projects = [
     {
-      title: "Movie Recommendation Website",
-      description: "A Movie Recommendation site built with Python",
-      link: "https://github.com/pamal29/Movie-Recommendations",
-      tech: "Python",
+      title: "NearU — Campus Services Platform",
+      description:
+        "Capstone project: rides, food, and accommodation for university campuses. I own the rides orchestration backend — real-time matching with PostGIS distance calculations, OTP verification over SignalR, and a background worker for driver assignment — plus the food ordering module end to end.",
+      link: "https://github.com/Nearu-Project-SUSL", 
+      tech: [".NET", "PostgreSQL", "React", "React Native", "SignalR"],
+      featured: true,
     },
     {
-      title: "Movie Streaming Website",
-      description: "Responsive movie streaming website",
-      link: "https://github.com/pamal29/Movie-Stream-Website",
-      tech: "HTML/CSS",
+      title: "HydroTrack",
+      description:
+        "A React Native hydration tracker with streak tracking, a 7-day history chart, and an animated SVG progress ring.",
+      link: "https://github.com/pamal29/HydroTrack", 
+      tech: ["React Native", "TypeScript"],
     },
     {
-      title: "Snake Game",
-      description: "Classic Snake Game built in Java",
-      link: "https://github.com/pamal29/snakeGame",
-      tech: "Java",
+      title: "PickAFlick",
+      description: "A movie and TV watchlist web app with authentication and a Supabase backend.",
+      link: "https://github.com/pamal29/PickAFlick", 
+      tech: ["React", "Supabase"],
     },
   ];
 
