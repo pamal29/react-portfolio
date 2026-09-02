@@ -4,23 +4,23 @@ export default function About() {
   const highlights = [
     {
       icon: Code,
-      title: "Full-Stack Developer",
-      description: "Passionate about building end-to-end solutions with modern technologies"
+      title: "Full-Stack, End to End",
+      description: "Comfortable owning a feature from database schema to deployed UI — .NET/PostgreSQL on the backend, React on the front."
     },
     {
       icon: Sparkles,
-      title: "Creative Problem Solver",
-      description: "I love turning complex challenges into elegant, user-friendly applications"
+      title: "Real-Time Systems",
+      description: "Built ride-matching and live status flows with SignalR, PostGIS geolocation, and background workers."
     },
     {
       icon: Target,
-      title: "Detail-Oriented",
-      description: "Focused on writing clean, efficient code and creating seamless user experiences"
+      title: "Debugs Under Pressure",
+      description: "Comfortable tracing production issues — from Docker network bindings to DbContext lifecycle bugs — to root cause."
     },
     {
       icon: Heart,
-      title: "Continuous Learner",
-      description: "Always exploring new technologies and staying current with industry trends"
+      title: "Ships Side Projects",
+      description: "Builds outside of coursework too: computer vision tools, mobile apps, and small utilities I actually use."
     }
   ];
 
@@ -36,32 +36,35 @@ export default function About() {
                        transition-all duration-300 hover:border-neonPurple/50 hover:shadow-lg hover:shadow-neonPurple/10">
           <div className="space-y-4 text-textLight/90 text-lg leading-relaxed">
             <p>
-              Hi there! 👋 I'm <span className="text-neonPurple font-semibold">Pamal Pahasara</span>, 
-              a passionate developer who loves creating innovative web applications and exploring 
-              the fascinating world of technology. My journey in software development started with 
-              curiosity and has grown into a deep commitment to building meaningful digital experiences.
-            </p>
-            
-            <p>
-              I specialize in full-stack development with a strong focus on modern frameworks like 
-              <span className="text-neonPurple font-semibold"> React</span>, 
-              <span className="text-neonPurple font-semibold"> Next.js</span>, and 
-              <span className="text-neonPurple font-semibold"> Node.js</span>. I'm also enthusiastic 
-              about exploring <span className="text-neonPurple font-semibold">AI and Machine Learning</span>, 
-              constantly seeking ways to integrate intelligent solutions into my projects.
+              I'm <span className="text-neonPurple font-semibold">Pamal Pahasara</span>, a
+              final-year Information Systems undergraduate at Sabaragamuwa University, building
+              full-stack applications with <span className="text-neonPurple font-semibold">React</span>,{" "}
+              <span className="text-neonPurple font-semibold">.NET</span>, and{" "}
+              <span className="text-neonPurple font-semibold">PostgreSQL</span>.
             </p>
 
             <p>
-              Beyond coding, I believe in the power of continuous learning and collaboration. Whether 
-              it's experimenting with new technologies, contributing to open-source projects, or 
-              solving complex algorithmic challenges, I'm always eager to expand my skills and push 
-              the boundaries of what's possible.
+              My main project is <span className="text-neonPurple font-semibold">NearU</span>, a
+              campus services platform where I own the rides orchestration backend real-time
+              ride matching with PostGIS distance calculations, OTP verification over SignalR, and
+              a background worker handling driver assignment plus the food ordering module,
+              end to end.
             </p>
 
             <p>
-              When I'm not in front of a screen, you might find me exploring the latest tech trends, 
-              working on personal projects, or sharing knowledge with the developer community. I'm 
-              always open to new opportunities and exciting collaborations!
+              Outside of that, I build smaller projects to learn specific things:{" "}
+              <span className="text-neonPurple font-semibold">HydroTrack</span>, a React Native
+              hydration tracker with streak and trend tracking, and{" "}
+              <span className="text-neonPurple font-semibold">AirSolve</span>, a computer-vision
+              math solver using OpenCV, MediaPipe, and OCR. I've also worked through Coursera's
+              supervised and deep learning coursework, which shows up in how I think about
+              features now.
+            </p>
+
+            <p>
+              I'm looking for opportunities where I can keep working across the stack backend
+              systems, mobile apps, or applied ML and learn from people who've shipped more
+              than I have.
             </p>
           </div>
         </div>
@@ -102,7 +105,7 @@ export default function About() {
             Currently Exploring
           </h3>
           <div className="flex flex-wrap justify-center gap-3">
-            {["Advanced React Patterns", "AI Integration", "Cloud Architecture", "TypeScript", "Web3", "System Design"].map((topic, index) => (
+            {["Real-Time Systems (SignalR)", "PostGIS & Geospatial Queries", "React Native", "AWS/Azure Hosting", "Machine Learning", "System Design"].map((topic, index) => (
               <span
                 key={index}
                 className="px-4 py-2 bg-black border border-white/30 rounded-full text-sm text-white
