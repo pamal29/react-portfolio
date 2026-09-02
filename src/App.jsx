@@ -113,27 +113,45 @@ PROJECTS
   };
 
   return (
-    <div className="bg-black min-h-screen w-full">
-      <div className="relative max-w-6xl mx-auto px-4">
+    <div className="bg-bg min-h-screen w-full">
+      <div className="relative max-w-5xl mx-auto px-6">
         <BackgroundBlobs />
         <Navbar scrollToSection={scrollToSection} />
 
-        <div
-          className="p-8 md:p-12 space-y-16 bg-stone-950 backdrop-blur-xl
-                      border border-gray-400/30 rounded-3xl mt-10 shadow-xl relative z-10 w-full"
-        >
+        {/* No outer boxed card — sections sit directly on the background,
+            separated by generous vertical spacing and thin dividers instead */}
+        <div className="relative z-10 w-full">
           <Hero handleDownloadCV={handleDownloadCV} />
-          <About />
-          <Skills skills={skills} />        {/* ✅ Fixed: Skills was defined but never rendered */}
-          <Education />
-          <Projects projects={projects} />
-          <GithubStats />
-          <ContactForm
-            submitted={submitted}
-            formData={formData}
-            setFormData={setFormData}
-            handleSubmit={handleSubmit}
-          />
+
+          <div className="border-t border-borderMuted">
+            <About />
+          </div>
+
+          <div className="border-t border-borderMuted">
+            <Skills skills={skills} />
+          </div>
+
+          <div className="border-t border-borderMuted">
+            <Education />
+          </div>
+
+          <div className="border-t border-borderMuted">
+            <Projects projects={projects} />
+          </div>
+
+          <div className="border-t border-borderMuted">
+            <GithubStats />
+          </div>
+
+          <div className="border-t border-borderMuted">
+            <ContactForm
+              submitted={submitted}
+              formData={formData}
+              setFormData={setFormData}
+              handleSubmit={handleSubmit}
+            />
+          </div>
+
           <Social />
         </div>
       </div>
