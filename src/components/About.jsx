@@ -5,7 +5,7 @@ export default function About() {
     {
       icon: Code,
       title: "Full-Stack, End to End",
-      description: "Comfortable owning a feature from database schema to deployed UI — .NET/PostgreSQL on the backend, React on the front."
+      description: "Comfortable owning a feature from database schema to deployed UI .NET/PostgreSQL on the backend, React on the front."
     },
     {
       icon: Sparkles,
@@ -15,7 +15,7 @@ export default function About() {
     {
       icon: Target,
       title: "Debugs Under Pressure",
-      description: "Comfortable tracing production issues — from Docker network bindings to DbContext lifecycle bugs — to root cause."
+      description: "Comfortable tracing production issues from Docker network bindings to DbContext lifecycle bugs to root cause."
     },
     {
       icon: Heart,
@@ -37,7 +37,7 @@ export default function About() {
           <div className="space-y-4 text-textLight/90 text-lg leading-relaxed">
             <p>
               I'm <span className="text-neonPurple font-semibold">Pamal Pahasara</span>, a
-              final-year Information Systems undergraduate at Sabaragamuwa University, building
+              third-year Information Systems undergraduate at Sabaragamuwa University, building
               full-stack applications with <span className="text-neonPurple font-semibold">React</span>,{" "}
               <span className="text-neonPurple font-semibold">.NET</span>, and{" "}
               <span className="text-neonPurple font-semibold">PostgreSQL</span>.
@@ -54,9 +54,7 @@ export default function About() {
             <p>
               Outside of that, I build smaller projects to learn specific things:{" "}
               <span className="text-neonPurple font-semibold">HydroTrack</span>, a React Native
-              hydration tracker with streak and trend tracking, and{" "}
-              <span className="text-neonPurple font-semibold">AirSolve</span>, a computer-vision
-              math solver using OpenCV, MediaPipe, and OCR. I've also worked through Coursera's
+              hydration tracker with streak. I've also worked through Coursera's
               supervised and deep learning coursework, which shows up in how I think about
               features now.
             </p>
