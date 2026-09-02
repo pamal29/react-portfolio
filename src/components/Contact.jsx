@@ -7,57 +7,59 @@ export default function Contact({
   handleSubmit
 }) {
   return (
-    <section id="contact" className="animate-fade-in">
+    <section id="contact" className="py-16 animate-fade-in">
       <h2 className="text-4xl font-bold text-center mb-8">
         Get In Touch
       </h2>
 
-
       {submitted ? (
-        <div className="bg-gray-800/50 border-4 border-neonPurple p-12 text-center rounded-2xl animate-scale-in">
-          <Send className="w-20 h-20 mx-auto mb-4 text-neonPurple animate-bounce-in" />
-          <h3 className="text-2xl font-bold">Message Sent!</h3>
+        <div className="max-w-2xl mx-auto bg-neutral-900/50 border-2 border-neonPurple p-12 text-center rounded-2xl animate-scale-in">
+          <Send className="w-16 h-16 mx-auto mb-4 text-neonPurple animate-bounce-in" />
+          <h3 className="text-2xl font-bold text-white">Message Sent!</h3>
+          <p className="text-neutral-400 text-sm mt-2">I'll get back to you soon.</p>
         </div>
       ) : (
-        <div className="max-w-2xl mx-auto space-y-6">
-
-          <div className="relative group">
-            <User className="absolute left-4 top-4 opacity-50" />
+        <div className="max-w-2xl mx-auto space-y-5">
+          <div className="relative">
+            <User className="absolute left-4 top-4 w-5 h-5 text-neutral-500" />
             <input
               type="text"
               value={formData.name}
               placeholder="Your Name"
               onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-              className="w-full bg-gray-800/30 border-2 border-gray-500/30 p-4 pl-12 rounded-xl focus:border-white outline-none"
+              className="w-full bg-neutral-900/50 border border-neutral-700 text-white placeholder:text-neutral-500
+                         p-4 pl-12 rounded-xl focus:border-neonPurple outline-none transition-colors"
             />
           </div>
 
-          <div className="relative group">
-            <Mail className="absolute left-4 top-4 opacity-50" />
+          <div className="relative">
+            <Mail className="absolute left-4 top-4 w-5 h-5 text-neutral-500" />
             <input
               type="email"
               value={formData.email}
               placeholder="Your Email"
               onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-              className="w-full bg-gray-800/30 border-2 border-gray-500/30 p-4 pl-12 rounded-xl focus:border-white outline-none"
+              className="w-full bg-neutral-900/50 border border-neutral-700 text-white placeholder:text-neutral-500
+                         p-4 pl-12 rounded-xl focus:border-neonPurple outline-none transition-colors"
             />
           </div>
 
-          {/* Message */}
-          <div className="relative group">
-            <MessageSquare className="absolute left-4 top-4 opacity-50" />
+          <div className="relative">
+            <MessageSquare className="absolute left-4 top-4 w-5 h-5 text-neutral-500" />
             <textarea
               rows="5"
               value={formData.message}
               placeholder="Your Message"
               onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-              className="w-full bg-gray-800/30 border-2 border-gray-500/30 p-4 pl-12 rounded-xl resize-none focus:border-white outline-none"
+              className="w-full bg-neutral-900/50 border border-neutral-700 text-white placeholder:text-neutral-500
+                         p-4 pl-12 rounded-xl resize-none focus:border-neonPurple outline-none transition-colors"
             />
           </div>
 
           <button
             onClick={handleSubmit}
-            className="w-full bg-purple-700 p-4 rounded-xl font-bold hover:bg-neonPurple transition-all flex justify-center items-center gap-3"
+            className="w-full bg-neonPurple text-black p-4 rounded-xl font-semibold
+                       hover:opacity-90 transition-all flex justify-center items-center gap-3"
           >
             Send Message <Send className="w-5 h-5" />
           </button>
