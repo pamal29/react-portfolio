@@ -12,11 +12,6 @@ export default function Social() {
       icon: Linkedin,
       url: "https://www.linkedin.com/in/pamal-pahasara-990ba2324/", 
     },
-    {
-      name: "Email",
-      icon: Mail,
-      url: "pamalpahasara@gmail.com", 
-    },
     
   ];
 
