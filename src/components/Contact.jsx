@@ -1,16 +1,49 @@
+import { useState } from "react";
+import emailjs from "@emailjs/browser";
 import { Send, Mail, User, MessageSquare } from "lucide-react";
 
-export default function Contact({
-  submitted,
-  formData,
-  setFormData,
-  handleSubmit
-}) {
+export default function Contact() {
+  const [formData, setFormData] = useState({ name: "", email: "", message: "" });
+  const [submitted, setSubmitted] = useState(false);
+  const [sending, setSending] = useState(false);
+  const [error, setError] = useState("");
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    if (!formData.name || !formData.email || !formData.message) {
+      setError("Please fill in all fields.");
+      return;
+    }
+
+    setSending(true);
+    setError("");
+
+    try {
+      await emailjs.send(
+        "YOUR_SERVICE_ID",
+        "YOUR_TEMPLATE_ID",
+        {
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+        },
+        "YOUR_PUBLIC_KEY"
+      );
+
+      setSubmitted(true);
+      setFormData({ name: "", email: "", message: "" });
+    } catch (err) {
+      console.error(err);
+      setError("Something went wrong. Please try again.");
+    } finally {
+      setSending(false);
+    }
+  };
+
   return (
     <section id="contact" className="py-16 animate-fade-in">
-      <h2 className="text-4xl font-bold text-center mb-8">
-        Get In Touch
-      </h2>
+      <h2 className="text-4xl font-bold text-center mb-8">Get In Touch</h2>
 
       {submitted ? (
         <div className="max-w-2xl mx-auto bg-neutral-900/50 border-2 border-neonPurple p-12 text-center rounded-2xl animate-scale-in">
@@ -19,7 +52,7 @@ export default function Contact({
           <p className="text-neutral-400 text-sm mt-2">I'll get back to you soon.</p>
         </div>
       ) : (
-        <div className="max-w-2xl mx-auto space-y-5">
+        <form onSubmit={handleSubmit} className="max-w-2xl mx-auto space-y-5">
           <div className="relative">
             <User className="absolute left-4 top-4 w-5 h-5 text-neutral-500" />
             <input
@@ -56,14 +89,18 @@ export default function Contact({
             />
           </div>
 
+          {error && <p className="text-red-500 text-sm text-center">{error}</p>}
+
           <button
-            onClick={handleSubmit}
+            type="submit"
+            disabled={sending}
             className="w-full bg-neonPurple text-black p-4 rounded-xl font-semibold
-                       hover:opacity-90 transition-all flex justify-center items-center gap-3"
+                       hover:opacity-90 transition-all flex justify-center items-center gap-3
+                       disabled:opacity-50 disabled:cursor-not-allowed"
           >
-            Send Message <Send className="w-5 h-5" />
+            {sending ? "Sending..." : "Send Message"} <Send className="w-5 h-5" />
           </button>
-        </div>
+        </form>
       )}
     </section>
   );
