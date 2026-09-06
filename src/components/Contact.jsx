@@ -21,14 +21,14 @@ export default function Contact() {
 
     try {
       await emailjs.send(
-        "YOUR_SERVICE_ID",
-        "YOUR_TEMPLATE_ID",
+        "service_r0qeg05",
+        "template_t7iwp46",
         {
           name: formData.name,
           email: formData.email,
           message: formData.message,
         },
-        "YOUR_PUBLIC_KEY"
+        "gmfBBrqkV9q6uk-nw"
       );
 
       setSubmitted(true);
