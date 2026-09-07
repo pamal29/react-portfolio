@@ -69,7 +69,7 @@ export default function App() {
 
   const handleDownloadCV = () => {
   const link = document.createElement("a");
-  link.href = "/cv.pdf"; 
+  link.href = "/Pamal_Pahasara_CV.pdf"; 
   link.download = "Pamal_Pahasara_CV.pdf";
   document.body.appendChild(link);
   link.click();
