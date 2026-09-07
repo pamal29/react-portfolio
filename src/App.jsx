@@ -68,47 +68,13 @@ export default function App() {
   };
 
   const handleDownloadCV = () => {
-    const content = `PAMAL PAHASARA
-Full Stack Developer & AI Enthusiast
-========================================
-
-CONTACT
-• GitHub  : https://github.com/pamal29
-• Email   : [your email here]
-• Location: Sri Lanka
-
-EDUCATION
-• BSc Information Systems — Sabaragamuwa University of Sri Lanka (2023–2028)
-
-CERTIFICATIONS
-• Supervised Machine Learning: Regression and Classification — Coursera (2025)
-• Advanced Learning Algorithms — Coursera (2025)
-
-SKILLS
-• Languages  : JavaScript, TypeScript, Python, Java
-• Frontend   : React, Next.js, Tailwind CSS, UI/UX Design
-• Backend    : Node.js
-• Databases  : MongoDB, PostgreSQL
-• DevOps     : Docker, Git, Cloud (AWS)
-
-PROJECTS
-• Movie Recommendation Website (Python)
-  https://github.com/pamal29/Movie-Recommendations
-
-• Movie Streaming Website (HTML/CSS)
-  https://github.com/pamal29/Movie-Stream-Website
-
-• Snake Game (Java)
-  https://github.com/pamal29/snakeGame
-`;
-    const blob = new Blob([content], { type: "text/plain" });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement("a");
-    a.href = url;
-    a.download = "Pamal_Pahasara_CV.txt";
-    a.click();
-    URL.revokeObjectURL(url);
-  };
+  const link = document.createElement("a");
+  link.href = "/cv.pdf"; 
+  link.download = "Pamal_Pahasara_CV.pdf";
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+};
 
   const scrollToSection = (id) => {
     const el = document.getElementById(id);
