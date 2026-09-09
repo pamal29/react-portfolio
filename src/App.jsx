@@ -41,6 +41,7 @@ export default function App() {
       link: "https://github.com/Nearu-Project-SUSL", 
       tech: [".NET", "PostgreSQL", "React", "React Native", "SignalR"],
       featured: true,
+      simple: true,
     },
     {
       title: "HydroTrack",
@@ -48,12 +49,14 @@ export default function App() {
         "A React Native hydration tracker with streak tracking, a 7-day history chart, and an animated SVG progress ring.",
       link: "https://github.com/pamal29/HydroTrack", 
       tech: ["React Native", "TypeScript"],
+      simple: true,
     },
     {
       title: "PickAFlick",
       description: "A movie and TV watchlist web app with authentication and a Supabase backend.",
       link: "https://github.com/pamal29/PickAFlick", 
       tech: ["React", "Supabase"],
+      simple: true,
     },
   ];
 
@@ -74,7 +77,7 @@ export default function App() {
   document.body.appendChild(link);
   link.click();
   document.body.removeChild(link);
-};
+  };
 
   const scrollToSection = (id) => {
     const el = document.getElementById(id);
@@ -87,8 +90,6 @@ export default function App() {
         <BackgroundBlobs />
         <Navbar scrollToSection={scrollToSection} />
 
-        {/* No outer boxed card — sections sit directly on the background,
-            separated by generous vertical spacing and thin dividers instead */}
         <div className="relative z-10 w-full">
           <Hero handleDownloadCV={handleDownloadCV} />
 
