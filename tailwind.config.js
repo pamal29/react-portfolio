@@ -1,27 +1,24 @@
 export default {
+  darkMode: "class",
   content: ["./index.html", "./src/**/*.{js,jsx}"],
 
   theme: {
     extend: {
       colors: {
-        // Base surfaces
         bg: {
-          DEFAULT: "#0a0a0a",
-          soft: "#111113",
+          DEFAULT: "rgb(var(--bg) / <alpha-value>)",
+          soft: "rgb(var(--bg-soft) / <alpha-value>)",
         },
 
-        // Text
-        textLight: "#f5f5f5",
-        mutedLight: "#a3a3a3",
-        muted: "#6b6b6f",
+        textLight: "rgb(var(--text-light) / <alpha-value>)",
+        mutedLight: "rgb(var(--muted-light) / <alpha-value>)",
+        muted: "rgb(var(--muted) / <alpha-value>)",
 
-        // Accent
-        neonPurple: "#8b5cf6",
-        neonPurpleDark: "#6d28d9",
-        neonPurpleSoft: "#c4b5fd",
+        neonPurple: "rgb(var(--neon-purple) / <alpha-value>)",
+        neonPurpleDark: "rgb(var(--neon-purple-dark) / <alpha-value>)",
+        neonPurpleSoft: "rgb(var(--neon-purple-soft) / <alpha-value>)",
 
-        // Borders
-        borderMuted: "#27272a",
+        borderMuted: "rgb(var(--border-muted) / <alpha-value>)",
       },
     },
   },
