@@ -7,7 +7,6 @@ import Projects from "./components/Projects";
 import ContactForm from "./components/Contact";
 import Social from "./components/Social";
 import Education from "./components/Education";
-import GithubStats from "./components/GithubStats";
 import About from "./components/About";
 
 export default function App() {
@@ -109,10 +108,7 @@ export default function App() {
             <Projects projects={projects} />
           </div>
 
-          <div className="border-t border-borderMuted">
-            <GithubStats />
-          </div>
-
+        
           <div className="border-t border-borderMuted">
             <ContactForm
               submitted={submitted}
