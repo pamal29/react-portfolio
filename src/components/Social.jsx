@@ -10,9 +10,8 @@ export default function Social() {
     {
       name: "LinkedIn",
       icon: Linkedin,
-      url: "https://www.linkedin.com/in/pamal-pahasara-990ba2324/", 
+      url: "https://www.linkedin.com/in/pamal-pahasara-990ba2324/",
     },
-    
   ];
 
   return (
@@ -28,13 +27,13 @@ export default function Social() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group flex flex-col items-center gap-2 p-4 rounded-xl
-                           bg-neutral-900/50 border border-neutral-700
+                           bg-bg-soft/50 border border-borderMuted
                            transition-all duration-300 hover:scale-110 hover:border-neonPurple
                            hover:shadow-lg hover:shadow-neonPurple/20 w-[90px]"
                 aria-label={social.name}
               >
-                <Icon className="w-6 h-6 text-white transition-colors duration-300 group-hover:text-neonPurple" />
-                <span className="text-sm text-neutral-400 transition-colors duration-300 group-hover:text-neonPurple">
+                <Icon className="w-6 h-6 text-textLight transition-colors duration-300 group-hover:text-neonPurple" />
+                <span className="text-sm text-mutedLight transition-colors duration-300 group-hover:text-neonPurple">
                   {social.name}
                 </span>
               </a>

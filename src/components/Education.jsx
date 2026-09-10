@@ -46,7 +46,7 @@ export default function Education() {
         {education.map((edu, index) => (
           <div
             key={index}
-            className="bg-stone-900/50 backdrop-blur-sm border border-gray-400/20 rounded-2xl p-8
+            className="bg-bg-soft/50 backdrop-blur-sm border border-borderMuted rounded-2xl p-8
                        transition-all duration-300 hover:border-neonPurple/50 hover:shadow-lg hover:shadow-neonPurple/10"
           >
             <div className="flex items-start gap-4 mb-4">
@@ -55,10 +55,9 @@ export default function Education() {
               </div>
               <div className="flex-1">
                 <div className="flex flex-wrap items-center gap-3 mb-2">
-                  <h3 className="text-2xl font-bold text-white">
+                  <h3 className="text-2xl font-bold text-textLight">
                     {edu.degree}
                   </h3>
-                  {/* "Currently Pursuing" badge */}
                   {edu.status && (
                     <span className="px-3 py-1 text-xs font-semibold rounded-full
                                      bg-neonPurple/20 text-neonPurple border border-neonPurple/40
@@ -83,7 +82,6 @@ export default function Education() {
               </div>
             </div>
 
-            {/* Achievements */}
             <div className="mb-4">
               <h4 className="text-lg font-semibold text-neonPurple mb-3 flex items-center gap-2">
                 <Award className="w-5 h-5" />
@@ -99,7 +97,6 @@ export default function Education() {
               </ul>
             </div>
 
-            {/* Relevant Coursework */}
             <div>
               <h4 className="text-lg font-semibold text-neonPurple mb-3">
                 Relevant Coursework
@@ -108,7 +105,7 @@ export default function Education() {
                 {edu.coursework.map((course, i) => (
                   <span
                     key={i}
-                    className="px-3 py-1 bg-black border border-white/30 rounded-full text-sm text-white
+                    className="px-3 py-1 bg-bg-soft border border-borderMuted rounded-full text-sm text-textLight
                                transition-all duration-300 hover:border-neonPurple hover:scale-105"
                   >
                     {course}
@@ -121,7 +118,7 @@ export default function Education() {
 
         {/* Certifications */}
         <div
-          className="bg-stone-900/50 backdrop-blur-sm border border-gray-400/20 rounded-2xl p-8
+          className="bg-bg-soft/50 backdrop-blur-sm border border-borderMuted rounded-2xl p-8
                      transition-all duration-300 hover:border-neonPurple/50 hover:shadow-lg hover:shadow-neonPurple/10"
         >
           <h3 className="text-2xl font-bold text-neonPurple mb-6 flex items-center gap-2">
@@ -132,10 +129,10 @@ export default function Education() {
             {certifications.map((cert, index) => (
               <div
                 key={index}
-                className="p-4 bg-black/50 border border-white/20 rounded-xl
+                className="p-4 bg-bg-soft/50 border border-borderMuted rounded-xl
                            transition-all duration-300 hover:border-neonPurple hover:scale-105"
               >
-                <h4 className="font-semibold text-white mb-1">{cert.name}</h4>
+                <h4 className="font-semibold text-textLight mb-1">{cert.name}</h4>
                 <p className="text-sm text-textLight/70">{cert.issuer}</p>
                 <p className="text-sm text-neonPurple font-medium mt-1">{cert.year}</p>
               </div>

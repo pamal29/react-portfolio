@@ -3,7 +3,6 @@ import { Github } from "lucide-react";
 export default function GithubStats() {
   const username = "pamal29";
 
-  // Shared query params for both stat images
   const imgParams = new URLSearchParams({
     username,
     theme: "radical",
@@ -29,13 +28,12 @@ export default function GithubStats() {
       <h2 className="text-4xl font-bold mb-2 text-center text-neonPurple">
         GitHub Activity
       </h2>
-      <p className="text-center text-neutral-500 text-sm mb-10">
+      <p className="text-center text-muted text-sm mb-10">
         Live stats, pulled directly from GitHub
       </p>
 
       <div className="max-w-5xl mx-auto space-y-8">
-        {/* Overall Stats Card */}
-        <div className="bg-stone-900/50 backdrop-blur-sm border border-borderMuted rounded-2xl p-6
+        <div className="bg-bg-soft/50 backdrop-blur-sm border border-borderMuted rounded-2xl p-6
                        transition-all duration-300 hover:border-neonPurple/50">
           <h3 className="text-xl font-semibold text-neonPurple mb-4">Overall Stats</h3>
           <img
@@ -48,8 +46,7 @@ export default function GithubStats() {
           />
         </div>
 
-        {/* GitHub Streak — using vercel-hosted mirror, more reliable than herokuapp */}
-        <div className="bg-stone-900/50 backdrop-blur-sm border border-borderMuted rounded-2xl p-6
+        <div className="bg-bg-soft/50 backdrop-blur-sm border border-borderMuted rounded-2xl p-6
                        transition-all duration-300 hover:border-neonPurple/50">
           <h3 className="text-xl font-semibold text-neonPurple mb-4 text-center">
             Contribution Streak
@@ -66,10 +63,9 @@ export default function GithubStats() {
           </div>
         </div>
 
-        {/* Call to Action */}
         <div className="text-center">
-          <a
-            href={`https://github.com/${username}`}
+          
+        <a    href={`https://github.com/${username}`}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-6 py-3 rounded-full

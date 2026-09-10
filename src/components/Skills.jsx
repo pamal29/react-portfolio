@@ -20,7 +20,6 @@ const skillIcons = {
   Git: GitBranch,
 };
 
-// Higher = more filled dots shown next to the skill
 const statusLevel = {
   Expert: 3,
   Advanced: 2,
@@ -35,7 +34,7 @@ function ProficiencyDots({ status }) {
         <span
           key={i}
           className={`w-1.5 h-1.5 rounded-full ${
-            i <= level ? "bg-neonPurple" : "bg-neutral-700"
+            i <= level ? "bg-neonPurple" : "bg-borderMuted"
           }`}
         />
       ))}
@@ -45,10 +44,10 @@ function ProficiencyDots({ status }) {
 
 export default function Skills({ skills = [] }) {
   return (
-    <section id="skills" className="py-16 text-white">
+    <section id="skills" className="py-16 text-textLight">
       <div className="max-w-6xl mx-auto px-6">
         <h2 className="text-4xl font-bold mb-3 text-center">Skills</h2>
-        <p className="text-center text-neutral-500 text-sm mb-12">
+        <p className="text-center text-muted text-sm mb-12">
           Dots indicate proficiency — Intermediate to Expert
         </p>
 
@@ -60,9 +59,9 @@ export default function Skills({ skills = [] }) {
               <div
                 key={skill.name}
                 title={skill.status}
-                className="flex items-center gap-2 px-5 py-3 bg-neutral-900/60
-                           rounded-full border border-neutral-700 hover:border-neonPurple
-                           hover:bg-neutral-800/60 transition-all duration-300 cursor-default"
+                className="flex items-center gap-2 px-5 py-3 bg-bg-soft/60
+                           rounded-full border border-borderMuted hover:border-neonPurple
+                           hover:bg-bg-soft/90 transition-all duration-300 cursor-default"
               >
                 <Icon className="w-4 h-4 text-neonPurple" />
                 <span className="text-sm font-medium">{skill.name}</span>

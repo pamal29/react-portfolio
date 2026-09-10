@@ -32,7 +32,7 @@ export default function About() {
 
       <div className="max-w-4xl mx-auto space-y-8">
         {/* Main Introduction */}
-        <div className="bg-stone-900/50 backdrop-blur-sm border border-gray-400/20 rounded-2xl p-8
+        <div className="bg-bg-soft/50 backdrop-blur-sm border border-borderMuted rounded-2xl p-8
                        transition-all duration-300 hover:border-neonPurple/50 hover:shadow-lg hover:shadow-neonPurple/10">
           <div className="space-y-4 text-textLight/90 text-lg leading-relaxed">
             <p>
@@ -74,7 +74,7 @@ export default function About() {
             return (
               <div
                 key={index}
-                className="bg-stone-900/50 backdrop-blur-sm border border-gray-400/20 rounded-xl p-6
+                className="bg-bg-soft/50 backdrop-blur-sm border border-borderMuted rounded-xl p-6
                            transition-all duration-300 hover:border-neonPurple/50 hover:scale-105
                            hover:shadow-lg hover:shadow-neonPurple/10"
               >
@@ -83,7 +83,7 @@ export default function About() {
                     <Icon className="w-6 h-6 text-neonPurple" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold text-white mb-2">
+                    <h3 className="text-xl font-semibold text-textLight mb-2">
                       {item.title}
                     </h3>
                     <p className="text-textLight/80 text-sm">
@@ -97,7 +97,7 @@ export default function About() {
         </div>
 
         {/* What I'm Currently Working On */}
-        <div className="bg-stone-900/50 backdrop-blur-sm border border-gray-400/20 rounded-2xl p-8
+        <div className="bg-bg-soft/50 backdrop-blur-sm border border-borderMuted rounded-2xl p-8
                        transition-all duration-300 hover:border-neonPurple/50 hover:shadow-lg hover:shadow-neonPurple/10">
           <h3 className="text-2xl font-bold text-neonPurple mb-4 text-center">
             Currently Exploring
@@ -106,7 +106,7 @@ export default function About() {
             {["Real-Time Systems (SignalR)", "PostGIS & Geospatial Queries", "React Native", "AWS/Azure Hosting", "Machine Learning", "System Design"].map((topic, index) => (
               <span
                 key={index}
-                className="px-4 py-2 bg-black border border-white/30 rounded-full text-sm text-white
+                className="px-4 py-2 bg-bg-soft border border-borderMuted rounded-full text-sm text-textLight
                            transition-all duration-300 hover:border-neonPurple hover:scale-110 hover:shadow-lg hover:shadow-neonPurple/20"
               >
                 {topic}

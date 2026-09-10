@@ -3,20 +3,20 @@ import { Github, Download } from "lucide-react";
 export default function Hero({ handleDownloadCV }) {
   return (
     <section id="hero" className="text-center pt-24 pb-20">
-      <p className="text-sm mb-4 text-neutral-500 tracking-wide uppercase">
+      <p className="text-sm mb-4 text-muted tracking-wide uppercase">
         Hi, I am
       </p>
 
-      <h1 className="text-5xl md:text-7xl font-bold mb-4 text-white tracking-tight">
+      <h1 className="text-5xl md:text-7xl font-bold mb-4 text-textLight tracking-tight">
         Pamal Pahasara
       </h1>
 
-      <h2 className="text-xl md:text-2xl font-medium mb-5 text-neutral-400">
+      <h2 className="text-xl md:text-2xl font-medium mb-5 text-mutedLight">
         Full Stack Developer{" "}
         <span className="text-neonPurple">&amp; AI Enthusiast</span>
       </h2>
 
-      <p className="text-base text-neutral-500 max-w-md mx-auto mb-12 leading-relaxed">
+      <p className="text-base text-muted max-w-md mx-auto mb-12 leading-relaxed">
         Undergraduate at Sabaragamuwa University — building modern web apps
         and exploring machine learning.
       </p>
@@ -37,7 +37,7 @@ export default function Hero({ handleDownloadCV }) {
         <button
           onClick={handleDownloadCV}
           className="px-6 py-3 rounded-full flex items-center gap-2
-                     text-white border border-neutral-700
+                     text-textLight border border-borderMuted
                      transition-all duration-300 hover:border-neonPurple hover:text-neonPurple"
         >
           <Download className="w-5 h-5" />

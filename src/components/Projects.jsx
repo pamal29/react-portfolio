@@ -4,8 +4,8 @@ export default function Projects({ projects }) {
   return (
     <section id="projects" className="py-16">
       <div className="text-center mb-10">
-        <h3 className="text-4xl font-bold mb-2">Featured Projects</h3>
-        <p className="text-neutral-500 text-sm">
+        <h3 className="text-4xl font-bold mb-2 text-textLight">Featured Projects</h3>
+        <p className="text-muted text-sm">
           A few things I've built and shipped
         </p>
       </div>
@@ -15,13 +15,13 @@ export default function Projects({ projects }) {
           if (project.simple) {
             return (
               <a key={i} href={project.link} target="_blank" rel="noopener noreferrer"
-                className="flex items-center justify-between group bg-neutral-900/50
-                           backdrop-blur-sm border border-neutral-700 rounded-xl p-6
+                className="flex items-center justify-between group bg-bg-soft/50
+                           backdrop-blur-sm border border-borderMuted rounded-xl p-6
                            transition-all duration-300 hover:border-neonPurple hover:-translate-y-1">
-                <h4 className="font-bold text-lg group-hover:text-neonPurple transition">
+                <h4 className="font-bold text-lg text-textLight group-hover:text-neonPurple transition">
                   {project.title}
                 </h4>
-                <ExternalLink className="w-5 h-5 text-neutral-500 flex-shrink-0
+                <ExternalLink className="w-5 h-5 text-muted flex-shrink-0
                              group-hover:text-neonPurple group-hover:scale-110
                              transition-all duration-300" />
               </a>
@@ -30,13 +30,13 @@ export default function Projects({ projects }) {
 
           return (
             <a key={i} href={project.link} target="_blank" rel="noopener noreferrer"
-              className={`block group bg-neutral-900/50 backdrop-blur-sm border border-neutral-700
+              className={`block group bg-bg-soft/50 backdrop-blur-sm border border-borderMuted
                          rounded-xl p-6 transition-all duration-300
                          hover:border-neonPurple hover:-translate-y-1
                          ${project.featured ? "lg:col-span-2" : ""}`}>
               <div className="flex justify-between items-start mb-4">
                 <div>
-                  <h4 className="font-bold text-xl mb-2 group-hover:text-neonPurple transition">
+                  <h4 className="font-bold text-xl mb-2 text-textLight group-hover:text-neonPurple transition">
                     {project.title}
                   </h4>
                   <div className="flex flex-wrap gap-2">
@@ -48,11 +48,11 @@ export default function Projects({ projects }) {
                     ))}
                   </div>
                 </div>
-                <ExternalLink className="w-5 h-5 text-neutral-500 flex-shrink-0
+                <ExternalLink className="w-5 h-5 text-muted flex-shrink-0
                              group-hover:text-neonPurple group-hover:scale-110
                              transition-all duration-300" />
               </div>
-              <p className="text-sm text-neutral-400 leading-relaxed">
+              <p className="text-sm text-mutedLight leading-relaxed">
                 {project.description}
               </p>
             </a>
