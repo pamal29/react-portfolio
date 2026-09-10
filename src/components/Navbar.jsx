@@ -1,4 +1,5 @@
 import { Home, Code, Briefcase, Phone, Github } from "lucide-react";
+import ThemeToggle from "../ThemeToggle";
 
 export default function Navbar({ scrollToSection }) {
   const navItems = [
