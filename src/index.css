@@ -6,6 +6,32 @@ html {
   scroll-behavior: smooth;
 }
 
-body {
-  @apply bg-black text-white;
+.dark {
+  --bg: 10 10 10;            /* #0a0a0a */
+  --bg-soft: 17 17 19;       /* #111113 */
+
+  --text-light: 245 245 245; /* #f5f5f5 */
+  --muted-light: 163 163 163;/* #a3a3a3 */
+  --muted: 107 107 111;      /* #6b6b6f */
+
+  --neon-purple: 139 92 246;     /* #8b5cf6 */
+  --neon-purple-dark: 109 40 217;/* #6d28d9 */
+  --neon-purple-soft: 196 181 253;/* #c4b5fd */
+
+  --border-muted: 39 39 42;  /* #27272a */
+}
+
+.light {
+  --bg: 255 255 255;
+  --bg-soft: 245 245 247;
+
+  --text-light: 23 23 23;
+  --muted-light: 82 82 82;
+  --muted: 115 115 115;
+
+  --neon-purple: 124 58 237;      
+  --neon-purple-dark: 91 33 182;
+  --neon-purple-soft: 139 92 246;
+
+  --border-muted: 228 228 231;
 }
