@@ -34,30 +34,45 @@ export default function App() {
 
   const projects = [
     {
-      title: "NearU — Campus Services Platform",
-      description:
-        "Capstone project: rides, food, and accommodation for university campuses. I own the rides orchestration backend — real-time matching with PostGIS distance calculations, OTP verification over SignalR, and a background worker for driver assignment — plus the food ordering module end to end.",
-      link: "https://github.com/Nearu-Project-SUSL", 
-      tech: [".NET", "PostgreSQL", "React", "React Native", "SignalR"],
+      title: "NearU — Rides & Food Backend",
+      link: "https://github.com/Nearu-Project-SUSL",
+      image: "/projects/nearu.png",
       featured: true,
-      simple: true,
+      tech: [".NET", "PostgreSQL/PostGIS", "SignalR", "EF Core", "React"],
+      description:
+        "Campus services platform. Owned real-time ride matching end-to-end — PostGIS/Haversine distance validation, OTP verification over SignalR, and a background worker (GhostRiderWorker) handling driver assignment with row-locked repositories to prevent double-assignment. Also built the food ordering module from schema to UI.",
+    },
+    {
+      title: "RepoInsight",
+      link: "https://github.com/pamal29/repoinsight",
+      image: "/projects/repoinsight.png",
+      tech: ["FastAPI", "React", "GitHub REST API", "Docker", "GitHub Actions"],
+      description:
+        "A GitHub repo analyzer with a full CI/CD pipeline I set up myself — GitHub Actions builds a Docker image, pushes it to GHCR, and deploys to an EC2 instance on push to main.",
+    },
+    {
+      title: "AirSolve",
+      link: "https://github.com/pamal29/airsolve",
+      image: "/projects/airsolve.png",
+      tech: ["Python", "OpenCV", "MediaPipe", "Tesseract OCR", "SymPy"],
+      description:
+        "A computer-vision math solver — tracks hand gestures via MediaPipe to let you draw equations in the air, OCRs the result with Tesseract, and solves it symbolically with SymPy.",
     },
     {
       title: "HydroTrack",
+      link: "https://github.com/pamal29/HydroTrack",
+      image: "/projects/hydrotrack.png",
+      tech: ["React Native", "Expo"],
       description:
-        "A React Native hydration tracker with streak tracking, a 7-day history chart, and an animated SVG progress ring.",
-      link: "https://github.com/pamal29/HydroTrack", 
-      tech: ["React Native", "TypeScript"],
-      simple: true,
+        "A hydration tracker with daily streaks, built to learn React Native and mobile state persistence patterns.",
     },
     {
       title: "PickAFlick",
-      description: "A movie and TV watchlist web app with authentication and a Supabase backend.",
-      link: "https://github.com/pamal29/PickAFlick", 
-      tech: ["React", "Supabase"],
+      link: "https://github.com/pamal29/PickAFlick",
       simple: true,
     },
   ];
+
 
   const handleSubmit = () => {
     if (formData.name && formData.email && formData.message) {
