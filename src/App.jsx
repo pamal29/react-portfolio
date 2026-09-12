@@ -51,14 +51,6 @@ export default function App() {
         "A GitHub repo analyzer with a full CI/CD pipeline I set up myself — GitHub Actions builds a Docker image, pushes it to GHCR, and deploys to an EC2 instance on push to main.",
     },
     {
-      title: "AirSolve",
-      link: "https://github.com/pamal29/airsolve",
-      image: "/projects/airsolve.png",
-      tech: ["Python", "OpenCV", "MediaPipe", "Tesseract OCR", "SymPy"],
-      description:
-        "A computer-vision math solver — tracks hand gestures via MediaPipe to let you draw equations in the air, OCRs the result with Tesseract, and solves it symbolically with SymPy.",
-    },
-    {
       title: "HydroTrack",
       link: "https://github.com/pamal29/HydroTrack",
       image: "/projects/hydrotrack.png",
@@ -69,8 +61,19 @@ export default function App() {
     {
       title: "PickAFlick",
       link: "https://github.com/pamal29/PickAFlick",
-      simple: true,
+      image: "/projects/pickaflick.png",
+      tech: ["React", "Supabase"],
+      description:
+        "A movie/TV watchlist app with Supabase-backed auth. Debugged a tricky auth flow issue caused by a paused Supabase project and env variable mismatches between environments.",
     },
+    {
+      title: "YT Download",
+      link: "https://github.com/pamal29/yt_download",
+      image: "/projects/ytdownload.png",
+      tech: ["Python", "yt-dlp", "React"],
+      description:
+        "A YouTube downloader with a Python backend built on yt-dlp, letting users pick video format and quality before downloading, with a React frontend for the UI.",
+    }
   ];
 
 
