@@ -9,6 +9,7 @@ import Social from "./components/Social";
 import Education from "./components/Education";
 import About from "./components/About";
 
+
 export default function App() {
   const [submitted, setSubmitted] = useState(false);
   const [formData, setFormData] = useState({
@@ -86,6 +87,18 @@ export default function App() {
       }, 2000);
     }
   };
+
+
+  const buildingProjects = [
+  {
+    title: "WaveShare",
+    status: "In Progress",
+    tech: ["Flutter", "UDP", "TCP"],
+    description:
+      "Cross-platform LAN file-sharing app for mobile and desktop — UDP broadcast for device discovery, QR-code pairing as a fallback, and raw TCP chunked transfer with live speed/ETA stats. First project with Flutter and low-level networking, learning both as I build.",
+  },
+];
+
 
   const handleDownloadCV = () => {
   const link = document.createElement("a");
