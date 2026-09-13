@@ -76,12 +76,14 @@ export default function App() {
         "A YouTube downloader with a Python backend built on yt-dlp, letting users pick video format and quality before downloading, with a React frontend for the UI.",
     }
   ];
+  
 
   const buildingProjects = [
     {
-      title: "WaveShare",
+      title: "WaveDrop",
       status: "In Progress",
       tech: ["Flutter", "UDP", "TCP"],
+      link: "https://github.com/pamal29/WaveDrop",
       description:
         "Cross-platform LAN file-sharing app for mobile and desktop — UDP broadcast for device discovery, QR-code pairing as a fallback, and raw TCP chunked transfer with live speed/ETA stats. First project with Flutter and low-level networking, learning both as I build.",
     },
