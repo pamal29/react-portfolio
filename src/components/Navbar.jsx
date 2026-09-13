@@ -6,7 +6,6 @@ export default function Navbar({ scrollToSection }) {
     { icon: Home, label: "Home", section: "hero" },
     { icon: Code, label: "Skills", section: "skills" },
     { icon: Briefcase, label: "Projects", section: "projects" },
-    { icon: Github, label: "Github", section: "github" },
     { icon: Phone, label: "Contact", section: "contact" },
   ];
 

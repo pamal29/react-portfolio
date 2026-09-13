@@ -23,15 +23,15 @@ html {
 
 .light {
   --bg: 255 255 255;
-  --bg-soft: 244 244 246;
+  --bg-soft: 240 240 242;
 
-  --text-light: 15 15 15;
-  --muted-light: 55 55 55;
-  --muted: 75 75 75;
+  --text-light: 10 10 10;
+  --muted-light: 40 40 40;
+  --muted: 90 90 95;
 
   --neon-purple: 109 40 217;
   --neon-purple-dark: 76 29 149;
-  --neon-purple-soft: 124 58 237;
+  --neon-purple-soft: 91 33 182;
 
-  --border-muted: 210 210 214;
+  --border-muted: 180 180 186;
 }
