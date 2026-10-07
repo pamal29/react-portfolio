@@ -28,14 +28,6 @@ export default function About() {
     },
   ];
 
-  const topics = [
-    "Real-Time Systems (SignalR)",
-    "PostGIS & Geospatial Queries",
-    "React Native",
-    "AWS/Azure Hosting",
-    "Machine Learning",
-    "System Design",
-  ];
 
   const card =
     "bg-bg-soft/50 backdrop-blur-sm border border-borderMuted rounded-2xl " +
@@ -50,9 +42,9 @@ export default function About() {
 
       <div className="w-full space-y-6 lg:space-y-8">
         {/* Intro + Currently Exploring side by side on large screens */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8">
+        <div className="grid grid-cols-1 gap-6 lg:gap-6">
           {/* Main Introduction */}
-          <div className={`${card} p-8 lg:col-span-2`}>
+          <div className={`${card} p-8`}>
             <div className="space-y-4 text-textLight/90 text-lg leading-relaxed">
               <p>
                 I'm{" "}
@@ -90,24 +82,6 @@ export default function About() {
                 the stack backend systems, mobile apps, or applied ML and learn
                 from people who've shipped more than I have.
               </p>
-            </div>
-          </div>
-
-          {/* Currently Exploring */}
-          <div className={`${card} p-8 flex flex-col`}>
-            <h3 className="text-2xl font-bold text-neonPurple mb-6 text-center">
-              Currently Exploring
-            </h3>
-            <div className="flex flex-wrap justify-center gap-3 my-auto">
-              {topics.map((topic) => (
-                <span
-                  key={topic}
-                  className="px-4 py-2 bg-bg-soft border border-borderMuted rounded-full text-sm text-textLight
-                             transition-all duration-300 hover:border-neonPurple hover:shadow-lg hover:shadow-neonPurple/20"
-                >
-                  {topic}
-                </span>
-              ))}
             </div>
           </div>
         </div>
