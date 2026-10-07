@@ -1,4 +1,5 @@
 import { Github, Download } from "lucide-react";
+import TerminalIntro from "./Terminaltype"
 
 export default function Hero({ handleDownloadCV }) {
   return (
