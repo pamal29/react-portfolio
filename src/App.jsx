@@ -115,7 +115,7 @@ export default function App() {
 
   return (
     <div className="bg-bg min-h-screen w-full">
-      <div className="relative max-w-5xl mx-auto px-6">
+      <div className="relative w-full max-w-[1600px] mx-auto px-6 md:px-12 lg:px-20">
         <BackgroundBlobs />
         <Navbar scrollToSection={scrollToSection} />
 
